@@ -10,15 +10,6 @@ export const App = ()=> {
   const [contacts, setContacts] = useState(JSON.parse(localStorage.getItem('contacts')));
   const [filter, setFilter] = useState('');
   
-
-  // useEffect(() => {
-  // JSON.parse(localStorage.getItem('contacts')) 
-  //     console.log(contacts);
-      
-    
-  
-  // }, [])
-  
   useEffect(() => {
      localStorage.setItem('contacts', JSON.stringify(contacts))
   }, [contacts])
