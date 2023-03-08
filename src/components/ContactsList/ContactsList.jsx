@@ -11,13 +11,13 @@ export const ContactsList = () => {
   );
    return  <>
         <ul>
-            {filteredContacts.map(({ id, name, number }) =>
+            {filter ? filteredContacts.map(({ id, name, number }) =>
                 <ContactItem
                     key={id}
                     id={id}
                     name={name}
                     number={number}
-            />)}
+            />):''}
         </ul>
     </>
 }
